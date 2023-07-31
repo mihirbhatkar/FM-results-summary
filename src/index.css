@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-family: "Hanken Grotesk", sans-serif;
+    /* For hsl this is the format */
+    /* *Primary colors */
+    --pri-light-red: 0deg 100% 67%;
+    --pri-orangey-yellow: 39deg 100% 56%;
+    --pri-green-teal: 166deg 100% 37%;
+    --pri-cobalt-blue: 234deg 85% 45%;
+
+    --grad-light-slate-blue: 252deg 100% 67%;
+    --grad-light-royal-blue: 241deg 81% 54%;
+
+    /* For hsla or rgba put commas */
+    /* *Gradient colors */
+    --grad-violet-blue: 256deg, 72%, 46%;
+    --grad-persian-blue: 241deg, 72%, 46%;
+
+    /* *Neutral colors */
+    --neu-pale-blue: 221deg 100% 96%;
+    --neu-light-lavender: 241deg 100% 89%;
+    --neu-dark-gray-blue: 224deg 100% 67%;
+  }
+}
