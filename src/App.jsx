@@ -23,34 +23,44 @@ function App() {
           <div className="font-bold self-start ">Summary</div>
           {data.map((item) => {
             let itemColor = "";
+            let itemTextColor = "";
             switch (item.category) {
               case "Reaction":
-                itemColor = "primaryRed";
+                itemColor = "bg-primaryRed/5";
+                itemTextColor = "text-primaryRed";
                 break;
 
               case "Memory":
-                itemColor = "primaryOrange";
+                itemColor = "bg-primaryOrange/5";
+                itemTextColor = "text-primaryOrange";
+
                 break;
 
               case "Verbal":
-                itemColor = "primaryGreen";
+                itemColor = "bg-primaryGreen/5";
+                itemTextColor = "text-primaryGreen";
+
                 break;
 
               case "Visual":
-                itemColor = "primaryCobalt";
+                itemColor = "bg-primaryCobalt/5";
+                itemTextColor = "text-primaryCobalt";
+
                 break;
 
               default:
-                itemColor = "black";
+                itemColor = "bg-black";
+                itemTextColor = "text-black";
+
                 break;
             }
-
             return (
               <div
-                className={`p-4 flex sm:gap-16 justify-between w-full bg-${itemColor}/5 rounded-lg`}
+                key={item.category}
+                className={`p-4 flex sm:gap-16 justify-between w-full ${itemColor} rounded-lg`}
               >
                 <div
-                  className={`text-${itemColor} font-semibold flex justify-between items-center`}
+                  className={`${itemTextColor} font-semibold flex justify-between items-center`}
                 >
                   <img src={item.icon} className="inline mr-2" alt="" />
                   {item.category}
@@ -64,7 +74,7 @@ function App() {
             );
           })}
 
-          <button className="bg-slate-700 font-bold text-white mt-2 mb-4 p-4 rounded-[500px] w-full">
+          <button className="bg-slate-700 font-bold text-white mt-2 mb-4 p-4 rounded-[500px] w-full active:bg-gradient-to-b active:from-gradLSB active:to-gradLRB ">
             Continue
           </button>
         </div>
